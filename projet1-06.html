@@ -4,27 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projet 1-05</title>
+  <title>Projet 1-06</title>
   <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
   <div id="app">
-    <p>Heure FR : {{dateFR}}</p>
-    <p>Heure US : {{dateUS}}</p>
+    <img :src="url">
   </div>
   <script>
     app = Vue.createApp({
       data() {
         return {
-          d: new Date(),
-          dateFR2 : new Date().toLocaleTimeString(),
-          dateUS2 : new Date().toLocaleTimeString('en-US')
+          url: 'https://vuejs.org/images/logo.png'
         }
-      },
-      computed : {
-        dateFR() {
-          return this.d.toLocaleTimeString()
-        }
+      }
     });
   app.mount('#app');
   </script>
