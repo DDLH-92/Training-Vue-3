@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projet 1-19</title>
+  <title>Projet 1-19+20</title>
   <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
   <div id="app">
     <label>Entrez votre prénom </label>
     <input type="text" v-model="prenom">
-    <button @click="bonjour">Clickez ici!</button>
+    <button @click="bonjour">Dis bonjour !</button>
+    <button @click="hello">Dis Hello !</button>
   </div>
   <script>
     app = Vue.createApp({
@@ -22,7 +23,10 @@
       },
       methods: {
         bonjour() {
-          alert('Bonjour' + this.prenom);
+          alert('Bonjour' + '' + this.prenom);
+        },
+        hello() {
+          alert('Hello' + '' + this.prenom);
         }
       }
     });
