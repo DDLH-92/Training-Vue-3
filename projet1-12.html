@@ -4,28 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projet 1-11</title>
+  <title>Projet 1-12</title>
   <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
   <div id="app">
-    <h2>{{hms}}</h2>
+    <input type="text" palceholder="Entrez votre nom" v-model = "nom">
+    Bonjour {{nom}}
   </div>
-
   <script>
     app = Vue.createApp({
       data() {
         return {
-            hms: ''
-          }
+          nom: ''
         }
-      },
-    );
-    let vm = app.mount('#app');
-    setInterval(() => {
-      let d = new Date();
-      vm.hms = d.toLocaleTimeString();
-    }, 1000);
+      }
+    });
+  app.mount('#app');
   </script>
 </body>
 </html>
