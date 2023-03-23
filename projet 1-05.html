@@ -16,7 +16,9 @@
     app = Vue.createApp({
       data() {
         return {
-          d: new Date()
+          d: new Date(),
+          dateFR2 : new Date().toLocaleTimeString(),
+          dateUS2 : new Date().toLocaleTimeString('en-US')
         }
       },
       computed : {
